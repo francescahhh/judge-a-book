@@ -1,0 +1,125 @@
+body {
+    background-color: #E9D8A6 ;
+}
+
+#newRelease {
+    color: #EE9B00;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+div {
+    background-color: #94D2BD;
+}
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0A9396;
+    text-align: center; 
+    letter-spacing: 8px;
+    font-weight: lighter;
+}
+
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #CA6702;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #AE2012;
+}
+
+input {
+    background-color: #EE9B00;
+    color: #001219;
+    cursor: pointer;
+    
+}
+
+input.commentBox {
+    background-color: white; 
+}
+
+li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #005F73
+}
+
+ /* like button */
+  .button {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 65px; height: 35px;
+    outline: 5px;
+    border: 3px solid #005F73;
+    color: #005F73;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.05);
+}
+
+.button:hover {
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.2);
+}
+
+.buttonLike {
+    padding: 5px 65px 5px 26px;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #E9D8A6;
+}
+
+.buttonLike.liked {
+    background: #AE2012;
+    border-color: #fff;
+}
+
+/*-- Button Icon -- */
+.buttonIcon {
+    display: inline-block;
+    width: 32px;
+    height: 36px;
+    position: absolute;
+    left: 1.5rem;
+    transition: 1s cubic-bezier(.21,.04,.26,.99);
+}
+.button:hover .buttonIcon {
+    color: var(--red);
+}
+.button.liked:hover .buttonIcon {
+    color: var(--black);
+}
+
+.liked .buttonIconDefault,
+.buttonIconLiked {
+    opacity: 0;
+    color: #fff;
+    position: absolute;
+}
+.buttonIconDefault,
+.liked .buttonIconLiked {
+    opacity: 1;
+    left: 1.5rem;
+}
+
+/*-- Button Content -- */
+.buttonContent {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+.liked .buttonContent {
+    color: #fff;
+}
+
+.button:not(.liked) .buttonContentLiked {
+    transform: translate(110px)
+}
+.button:not(.liked) .buttonContentDefault {
+    transform: translate(-50px)
+}
+.liked .buttonContentDefault {
+    transform: translate(30px)
+}
+  
