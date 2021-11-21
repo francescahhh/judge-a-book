@@ -19,6 +19,36 @@ buttonTwo.addEventListener('click', () => {
     buttonTwo.classList.toggle('liked')
 })
 
+//book 3 like button
+const buttonThree = document.getElementById('likeButtonThirdBook')
+
+buttonThree.addEventListener('click', () => {
+    buttonThree.classList.toggle('liked')
+})
+
+//book 4 like button
+const buttonFour = document.getElementById('likeButtonFourthBook')
+
+buttonFour.addEventListener('click', () => {
+    buttonFour.classList.toggle('liked')
+})
+
+//book 5 like button
+const buttonFive = document.getElementById('likeButtonFifthBook')
+
+buttonFive.addEventListener('click', () => {
+    buttonFive.classList.toggle('liked')
+})
+
+//book 6 like button
+const buttonSix = document.getElementById('likeButtonSixthBook')
+
+buttonSix.addEventListener('click', () => {
+    buttonSix.classList.toggle('liked')
+})
+
+
+
 //book 1 guess
 document.addEventListener("DOMContentLoaded", () => {
     const guessForm = document.getElementById('createGuessForm');
