@@ -1,9 +1,164 @@
-const bookOneAPI = "https://api.penguinrandomhouse.com/resources/v2/title/domains/PRH.US/titles?isbn=9780385545136&api_key=vceusdunnm648vqnxcqk728m"
+//book 1 data
+fetch("https://api.penguinrandomhouse.com/resources/v2/title/domains/PRH.US/titles/9780385545136?api_key=vceusdunnm648vqnxcqk728m")
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("NETWORK RESPONSE ERROR");
+    }
+  })
+  .then(data => {
+    console.log(data);
+    displayBook(data)
+  })
+  .catch((error) => console.error("FETCH ERROR:", error));
 
-//book 1 fetch request
-fetch(bookOneAPI)
-.then(response => response.json())
-.then(data => console.log(data))
+  function displayBook(data) {
+  const book = data.data.titles[0].title;
+  const bookOneTitle = document.getElementById("bookTitle");
+  bookOneTitle.innerHTML = book;
+
+  const author = data.data.titles[0].author;
+  const bookOneAuthor = document.getElementById("authorName");
+  bookOneAuthor.innerHTML = author;
+
+  document.getElementById("bookCover").src = data.data.titles[0]._links[1].href;
+}   
+
+//book 2 data
+fetch("https://api.penguinrandomhouse.com/resources/v2/title/domains/PRH.US/titles/9780525555254?api_key=vceusdunnm648vqnxcqk728m")
+.then((response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error("NETWORK RESPONSE ERROR");
+  }
+})
+.then(data2 => {
+  console.log(data2);
+  displayBookTwo(data2)
+})
+.catch((error) => console.error("FETCH ERROR:", error));
+
+function displayBookTwo(data2) {
+const bookTwo = data2.data.titles[0].title
+const bookTwoTitle = document.getElementById("bookTitle2");
+bookTwoTitle.innerHTML = bookTwo;
+
+const authorTwo = data2.data.titles[0].author
+const bookTwoAuthor = document.getElementById("authorName2");
+bookTwoAuthor.innerHTML = authorTwo;
+
+document.getElementById("bookCover2").src = data2.data.titles[0]._links[1].href
+}
+
+//book 3 data
+fetch("https://api.penguinrandomhouse.com/resources/v2/title/domains/PRH.US/titles/9781635421743?api_key=vceusdunnm648vqnxcqk728m")
+.then((response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error("NETWORK RESPONSE ERROR");
+  }
+})
+.then(data3 => {
+  console.log(data3);
+  displayBookThree(data3)
+})
+.catch((error) => console.error("FETCH ERROR:", error));
+
+function displayBookThree(data3) {
+const bookThree = data3.data.titles[0].title
+const bookThreeTitle = document.getElementById("bookTitle3");
+bookThreeTitle.innerHTML = bookThree;
+
+const authorThree = data3.data.titles[0].author
+const bookThreeAuthor = document.getElementById("authorName3");
+bookThreeAuthor.innerHTML = authorThree;
+
+document.getElementById("bookCover3").src = data3.data.titles[0]._links[1].href
+}
+
+//book 4 data
+fetch("https://api.penguinrandomhouse.com/resources/v2/title/domains/PRH.US/titles/9781662600593?api_key=vceusdunnm648vqnxcqk728m")
+.then((response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error("NETWORK RESPONSE ERROR");
+  }
+})
+.then(data4 => {
+  console.log(data4);
+  displayBookFour(data4)
+})
+.catch((error) => console.error("FETCH ERROR:", error));
+
+function displayBookFour(data4) {
+const bookFour = data4.data.titles[0].title
+const bookFourTitle = document.getElementById("bookTitle4");
+bookFourTitle.innerHTML = bookFour;
+
+const authorFour = data4.data.titles[0].author
+const bookFourAuthor = document.getElementById("authorName4");
+bookFourAuthor.innerHTML = authorFour;
+
+document.getElementById("bookCover4").src = data4.data.titles[0]._links[1].href
+}
+
+//book 5 data
+fetch("https://api.penguinrandomhouse.com/resources/v2/title/domains/PRH.US/titles/9781643858753?api_key=vceusdunnm648vqnxcqk728m")
+.then((response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error("NETWORK RESPONSE ERROR");
+  }
+})
+.then(data5 => {
+  console.log(data5);
+  displayBookFive(data5)
+})
+.catch((error) => console.error("FETCH ERROR:", error));
+
+function displayBookFive(data5) {
+const bookFive = data5.data.titles[0].title
+const bookFiveTitle = document.getElementById("bookTitle5");
+bookFiveTitle.innerHTML = bookFive;
+
+const authorFive = data5.data.titles[0].author;
+const bookFiveAuthor = document.getElementById("authorName5");
+bookFiveAuthor.innerHTML = authorFive;
+
+document.getElementById("bookCover5").src = data5.data.titles[0]._links[1].href
+}
+
+//book 6 data
+fetch("https://api.penguinrandomhouse.com/resources/v2/title/domains/PRH.US/titles/9780756416751?api_key=vceusdunnm648vqnxcqk728m")
+.then((response) => {
+  if (response.ok) {
+    return response.json();
+  } else {
+    throw new Error("NETWORK RESPONSE ERROR");
+  }
+})
+.then(data6 => {
+  console.log(data6);
+  displayBookSix(data6)
+})
+.catch((error) => console.error("FETCH ERROR:", error));
+
+function displayBookSix(data6) {
+const bookSix = data6.data.titles[0].title
+const bookSixTitle = document.getElementById("bookTitle6");
+bookSixTitle.innerHTML = bookSix;
+
+const authorSix = data6.data.titles[0].author;
+const bookSixAuthor = document.getElementById("authorName6");
+bookSixAuthor.innerHTML = authorSix;
+
+document.getElementById("bookCover6").src = data6.data.titles[0]._links[1].href
+}
 
 //book 1 like button
 const buttonOne = document.getElementById('likeButtonFirstBook')
@@ -46,8 +201,6 @@ const buttonSix = document.getElementById('likeButtonSixthBook')
 buttonSix.addEventListener('click', () => {
     buttonSix.classList.toggle('liked')
 })
-
-
 
 //book 1 guess
 document.addEventListener("DOMContentLoaded", () => {
@@ -205,4 +358,4 @@ document.addEventListener("DOMContentLoaded", () => {
         guess6.append(deleteButton6);
       
         //to clear out the text box after submitted
-        event.target.reset(); }
+        event.target.reset(); } 

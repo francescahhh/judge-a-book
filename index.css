@@ -1,3 +1,11 @@
+.bookCard {
+    display: block;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 10px;
+}
+
 body {
     background-color: #E9D8A6 ;
 }
@@ -42,7 +50,11 @@ input.commentBox {
 
 li {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #005F73
+    color: #005F73;
+}
+
+ul {
+    list-style-type: none;
 }
 
  /* like button */
